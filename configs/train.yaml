@@ -1,0 +1,45 @@
+"""
+ChemBERTa training configuration
+
+This YAML file specifies the hyperparameters and file paths used
+by ``train.py``.  Feel free to modify these values to suit your
+dataset and experimental goals.  Most entries mirror the arguments
+of :class:`~transformers.TrainingArguments` or custom options
+defined in ``chemberta_project.src.trainer.train_cv``.
+"""
+
+# Path to the training data CSV.  The CSV should contain columns
+# 'Smiles' and either 'pIC50' or 'ic50_nM'.  If 'ic50_nM' is
+# provided it will be converted to pIC50 automatically.
+dataset_path: "./data/train.csv"
+
+# Output directory to save checkpoints, predictions and manifests
+output_root: "./chemberta_outputs"
+
+# Random seed for reproducibility
+seed: 42
+
+# Number of folds for cross‑validation
+n_folds: 5
+
+# HuggingFace model to fine‑tune
+model_name: "DeepChem/ChemBERTa-77M-MTR"
+
+# Maximum SMILES token length
+max_len: 256
+
+# Training hyperparameters
+learning_rate: 2.0e-5
+train_batch_size: 32
+eval_batch_size: 64
+num_epochs: 50
+weight_decay: 0.01
+warmup_ratio: 0.1
+lr_scheduler_type: "cosine_with_restarts"
+save_total_limit: 2
+
+# Data loader workers
+dataloader_num_workers: 2
+
+# Mixed precision (FP16) flag
+fp16: true

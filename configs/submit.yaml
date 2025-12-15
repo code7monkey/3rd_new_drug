@@ -1,0 +1,25 @@
+"""
+ChemBERTa inference configuration
+
+This file specifies the inputs required for ``inference.py``.  The
+``manifest_path`` should point to the ``manifest.json`` produced
+during training.  The test data CSV must contain a column called
+``Smiles`` and optionally an ``ID`` column.  Predictions will be
+averaged across all folds listed in the manifest and written to the
+file named in ``submission_name``.
+"""
+
+# Path to the manifest generated during training
+manifest_path: "./chemberta_outputs/manifest.json"
+
+# Path to the test data CSV
+test_csv_path: "./data/test.csv"
+
+# Name of the output submission CSV (will be saved alongside manifest)
+submission_name: "submission_5fold.csv"
+
+# Evaluation batch size used during prediction
+eval_batch_size: 64
+
+# Data loader workers
+dataloader_num_workers: 2
