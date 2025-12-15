@@ -1,13 +1,3 @@
-"""
-ChemBERTa training configuration
-
-This YAML file specifies the hyperparameters and file paths used
-by ``train.py``.  Feel free to modify these values to suit your
-dataset and experimental goals.  Most entries mirror the arguments
-of :class:`~transformers.TrainingArguments` or custom options
-defined in ``chemberta_project.src.trainer.train_cv``.
-"""
-
 # Path to the training data CSV.  The CSV should contain columns
 # 'Smiles' and either 'pIC50' or 'ic50_nM'.  If 'ic50_nM' is
 # provided it will be converted to pIC50 automatically.
