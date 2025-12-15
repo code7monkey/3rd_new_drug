@@ -1,22 +1,3 @@
-"""
-Entry point for training ChemBERTa models.
-
-This script reads experiment parameters from a YAML configuration file
-and runs multi‑fold training accordingly.  It orchestrates data
-loading, splitting, tokenisation and training via the helper
-functions defined in ``chemberta_project.src``.  Upon completion, it
-produces a set of checkpoints, a manifest describing the best
-checkpoint per fold, and CSV files summarising out‑of‑fold
-predictions and fold metrics.
-
-Example
--------
-
-Run training using the default configuration in ``configs/train.yaml``::
-
-    python train.py --config configs/train.yaml
-"""
-
 from __future__ import annotations
 
 import argparse
