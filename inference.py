@@ -1,21 +1,3 @@
-"""
-Inference script for ChemBERTa models.
-
-This script reads a manifest produced during training, loads the
-best checkpoint from each fold, computes predictions on a test
-dataset and averages them to produce a final submission file.  The
-configuration file used here (default: ``configs/submit.yaml``)
-specifies the paths to the manifest, the test CSV and the output
-submission filename.
-
-Example
--------
-
-Run inference with the default configuration::
-
-    python inference.py --config configs/submit.yaml
-"""
-
 from __future__ import annotations
 
 import argparse
