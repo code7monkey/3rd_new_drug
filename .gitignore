@@ -1,0 +1,26 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+
+# Jupyter notebooks
+*.ipynb
+
+# Logs
+logs/
+*.log
+
+# Data and checkpoints (large files)
+data/
+ckpt/
+assets/model.pt
+assets/tokenizer/**
+
+# Misc
+.DS_Store
+Thumbs.db

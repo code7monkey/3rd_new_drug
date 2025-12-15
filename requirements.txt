@@ -1,0 +1,24 @@
+# Python package requirements for ChemBERTa project
+
+# Base scientific stack
+numpy==1.26.4
+pandas>=2.0.0,<3.0.0
+scikit-learn==1.6.1
+
+# PyTorch and associated libraries
+torch>=2.1.0
+torchmetrics==1.4.0
+
+# RDKit for cheminformatics
+rdkit==2023.3.3
+
+# HuggingFace ecosystem
+transformers==4.44.2
+tokenizers==0.19.1
+accelerate==0.34.2
+huggingface_hub==0.24.6
+datasets==2.20.0
+sentencepiece==0.1.99
+
+# YAML parsing
+PyYAML>=6.0
